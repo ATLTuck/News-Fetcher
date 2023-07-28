@@ -31,11 +31,10 @@ The News Scraper is a Python script that utilizes the News API to fetch news art
 
 2. Install the required dependencies:
 
-   ```shell
-   pip install -r requirements.txt
-   ```
+   Python3
+   beatifulsoup4
 
-3. Obtain an API key from [News API](https://newsapi.org/) and replace `API_KEY` in `main.py` with your own API key.
+4. Obtain an API key from [News API](https://newsapi.org/) and replace `API_KEY` in `main.py` with your own API key.
 
 ## Usage
 
