@@ -1,5 +1,6 @@
 import requests
 from colorama import Fore, Style
+from bs4 import BeautifulSoup
 
 API_KEY = "384a0c1d5c6c4bb3941cb3360afdb681"
 
@@ -38,6 +39,15 @@ def fetch_news():
         print(Fore.WHITE + "Description:", Fore.GREEN + description)
         print(Fore.WHITE + "URL:", Fore.BLUE + url)
         print(Fore.WHITE + "Published Date:", published_date)
+
+        try:
+            response = requests.get(url)
+            soup = BeautifulSoup(response.content, "html.parser")
+            content = soup.get_text()[:500]  # Limit content to 500 characters
+            print(Fore.CYAN + "Content:", content)
+        except Exception as e:
+            print(Fore.RED + "Error occurred while scraping content:", str(e))
+
         print("------------------------")
         print(Style.RESET_ALL)
 
