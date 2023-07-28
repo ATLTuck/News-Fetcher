@@ -1,8 +1,9 @@
 import requests
 from colorama import Fore, Style
 from bs4 import BeautifulSoup
+import re
 
-API_KEY = ""
+API_KEY = "384a0c1d5c6c4bb3941cb3360afdb681"
 recent_fetches = []
 
 def fetch_news():
@@ -87,7 +88,8 @@ def fetch_news_with_keyword(keyword):
             response = requests.get(url)
             soup = BeautifulSoup(response.content, "html.parser")
             content = soup.get_text().strip()  # Remove leading/trailing whitespace
-            print(Fore.CYAN + "Content:", content)
+            content = re.sub(r'\s+', ' ', content)  # Replace multiple consecutive whitespace with a single space
+            print(Fore.CYAN + "Content:", content[:500])  # Display first 500 characters
         except Exception as e:
             print(Fore.RED + "Error occurred while scraping content:", str(e))
 
