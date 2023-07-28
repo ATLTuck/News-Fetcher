@@ -34,7 +34,7 @@ The News Scraper is a Python script that utilizes the News API to fetch news art
    ```shell
    pip install requests colorama beautifulsoup4
    ```
-4. Obtain an API key from [News API](https://newsapi.org/) and replace `API_KEY` in `main.py` with your own API key.
+4. Obtain an API key from [News API](https://newsapi.org/) and replace `YOUR_API_KEY` in `main.py` with your own API key.
 
 ## Usage
 
