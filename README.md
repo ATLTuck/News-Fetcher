@@ -26,7 +26,7 @@ The News Scraper is a Python script that utilizes the News API to fetch news art
 1. Clone the repository:
 
    ```shell
-   git clone https://github.com/your-username/news-scraper.git
+   git clone https://github.com/ATLTuck/news-scraper.git
    ```
 
 2. Install the required dependencies:
