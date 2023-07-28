@@ -3,7 +3,7 @@ from colorama import Fore, Style
 from bs4 import BeautifulSoup
 import re
 
-API_KEY = "384a0c1d5c6c4bb3941cb3360afdb681"
+API_KEY = "API_KEY"
 recent_fetches = []
 
 def fetch_news():
